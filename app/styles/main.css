@@ -1,4 +1,4 @@
-@import url("fontello/css/rectify.css");
+@import url(fontello/css/rectify.css);
 /* maki */
 i[class*="icon-"]:before {
   width: 100%;
@@ -5291,5 +5291,11 @@ body {
 
 .footer {
   text-align: center; }
+  .footer label {
+    color: white;
+    float: left; }
+    .footer label h4 {
+      display: inline;
+      margin-left: 1em; }
   .footer .btn:hover, .footer .btn:focus {
     outline: none; }

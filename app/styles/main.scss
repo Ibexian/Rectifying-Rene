@@ -1,5 +1,5 @@
 $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
-@import url('fontello/css/rectify.css');
+@import 'fontello/css/rectify.css';
 
 /* maki */
 i[class*="icon-"]:before {
@@ -120,7 +120,16 @@ body {
   }
   }
   .footer {
-    text-align: center;.btn {
+    text-align: center;
+    label {
+        color:white;
+        float:left;
+        h4 {
+            display:inline;
+            margin-left: 1em;
+        }
+    }
+    .btn {
     &:hover, &:focus {
         outline:none;
     }
