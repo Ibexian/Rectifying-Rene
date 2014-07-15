@@ -16,10 +16,10 @@ Plus there is a toggle, so now we can have it both ways - true statements or sta
 
 
 ####Technical Colophon:
--Sass,
--Bootstrap,
--Microsoft Translator API,
--Node.js,
--request.js,
--fontello, 
--and Yeoman (for the scaffolding)
+- Sass,
+- Bootstrap,
+- Microsoft Translator API,
+- Node.js,
+- request.js,
+- fontello, 
+- and Yeoman (for the scaffolding)
