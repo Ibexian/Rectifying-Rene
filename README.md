@@ -1,7 +1,7 @@
 Rectifying-Rene
 ===============
 
-###Addressing the treatury of icon fonts
+###Addressing the treachery of icon fonts
 
 Project based on René's 'Treatury of Images' - you know 'this is not a pipe' with a picture of a pipe above it?
 [Ok, just go here](https://en.wikipedia.org/wiki/The_Treachery_of_Images)
