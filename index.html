@@ -1,65 +1,88 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Rectifying Rene by Ibexian</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Rectifying Rene</h1>
-      <h2 class="project-tagline">Addressing the treatury of icon fonts</h2>
-      <a href="https://github.com/Ibexian/Rectifying-Rene" class="btn">View on GitHub</a>
-      <a href="https://github.com/Ibexian/Rectifying-Rene/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/Ibexian/Rectifying-Rene/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Rectifying René | The Treatery of Icon Fonts</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
 
-    <section class="main-content">
-      <h1>
-<a id="rectifying-rene" class="anchor" href="#rectifying-rene" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rectifying-Rene</h1>
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" type="text/css" href="styles/fontello/css/rectify.css">
+        <!-- endbuild -->
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="../bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 
-<h3>
-<a id="addressing-the-treachery-of-icon-fonts" class="anchor" href="#addressing-the-treachery-of-icon-fonts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Addressing the treachery of icon fonts</h3>
 
-<p>Project based on René Magritte's 'Treachery of Images' - you know, 'this is not a pipe' with a picture of a pipe above it?</p>
+        <div class="container">
+            <div class="header">
+                <h3 >Rectifying René</h3>
+                <h4>Addressing the <a href='https://en.wikipedia.org/wiki/The_Treachery_of_Images'>'Treachery of Images'</a></h4>
+            </div>
 
-<p><a href="https://en.wikipedia.org/wiki/The_Treachery_of_Images">Ok, fine,  just go here</a></p>
+            <div class='rectified'>
+                <div id='correctImage' ></div>
+                <h1 id='correctText'></h1>                
+                
+            </div>
 
-<p>Good you're back. </p>
+            <div class="footer">
+                
+                    <label>
+                      <input type="checkbox" id='normies'> <h4>As René Intended?</h4>
+                    </label>
+                    <p>
+                    <button class="btn btn-lg btn-success" id='rectButton' style='margin-left:-11em;'>Again, Again! <span class="glyphicon glyphicon-heart"></span></button>
+                </p>
+            </div>
 
-<p>Well, I decided to turn it on its head -  through a combination of randomly generated true statements. Random colors, random font icons, their paired names, and Microsoft's translation api.</p>
+        </div>
 
-<p>Plus there is a toggle, so now we can have it both ways - true statements or statements on representation - just as René intended.</p>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
-<h4>
-<a id="technical-colophon" class="anchor" href="#technical-colophon" aria-hidden="true"><span class="octicon octicon-link"></span></a>Technical Colophon:</h4>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-45578162-1']);
+      _gaq.push(['_setDomainName', 'williamkamovitch.com']);
+      _gaq.push(['_trackPageview']);
 
-<ul>
-<li>Sass,</li>
-<li>Bootstrap,</li>
-<li>Microsoft Translator API,</li>
-<li>Node.js,</li>
-<li>request.js,</li>
-<li>fontello,</li>
-<li>forever,</li>
-<li>and Yeoman (for the scaffolding)</li>
-</ul>
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
 
-<p>A demo of the project is avialable <a href="http://www.williamkamovitch.com/projects/rectifyingrene/">here</a></p>
+        <!-- build:js scripts/plugins.js -->
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/popover.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/carousel.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/scrollspy.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js"></script>
+        <!-- endbuild -->
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/Ibexian/Rectifying-Rene">Rectifying Rene</a> is maintained by <a href="https://github.com/Ibexian">Ibexian</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
-  
-  </body>
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+</body>
 </html>
-
