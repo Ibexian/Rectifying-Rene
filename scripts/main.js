@@ -4,9 +4,14 @@
 [] Allow wallpaper dl
 */
 var token;
-$.getJSON('../../js/my.json', function(data) {
+$.ajax({
+    url: 'http://api.williamkamovitch.com/translator',
+    dataType: 'jsonp'
+}).done(function( data ) {
     token = data.access_token;
+    rectifyThis();
 });
+
 var mycallback = function(response) {
     console.log(response);
     if (response.slice(-1) == "1") {
@@ -90,8 +95,6 @@ var rectifyThis = function() {
     });
 
 };
-
-$(document).ready(rectifyThis());
 $('#rectButton').click(function() {
     rectifyThis();
 });
