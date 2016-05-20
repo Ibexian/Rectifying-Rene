@@ -4,6 +4,7 @@
 [] Allow wallpaper dl
 */
 var token;
+var nlp = window.nlp_compromise;
 $.ajax({
     url: 'http://api.williamkamovitch.com/translator',
     dataType: 'jsonp'
@@ -13,7 +14,6 @@ $.ajax({
 });
 
 var mycallback = function(response) {
-    console.log(response);
     if (response.slice(-1) == "1") {
         $('#correctText').html("Ceci n'est pas <br>" + response.slice(0, -1));
     } else {
@@ -23,7 +23,6 @@ var mycallback = function(response) {
 
 
 var rectifyThis = function() {
-
     var randHue = Math.floor(Math.random() * (255));
     var altHue = function(number) {
         if (number > 170 || number < 70) {
@@ -43,12 +42,11 @@ var rectifyThis = function() {
         for (i = 0; i < data.glyphs.length; i++) {
             nameArray.push(data.glyphs[i].css);
         }
-        console.log();
+
         var randImage = nameArray[Math.floor(Math.random() * (nameArray.length))];
         var randText = function() {
             var tempText = function() {
                 if ($('#normies').prop("checked")) {
-                    console.log("true");
                     return randImage;
                 } else {
                     var tempArray = nameArray[Math.floor(Math.random() * (nameArray.length))];
@@ -58,7 +56,11 @@ var rectifyThis = function() {
                     return tempArray;
                 }
             }
-            var split = 'a ' + tempText().replace(/\-/g, ' ');
+            var noun = tempText().replace(/\-/g, ' ').replace(/\d/g, '');
+            var verb = noun.search(/[^d]ing/) != -1 ? nlp.verb(noun).conjugate().gerund : ""; //Hack-y way to guess if the word is a verb
+            var article = nlp.noun(noun).is_uncountable() || verb ? "" : nlp.noun(noun).article() + " ";
+            var split = article.toLowerCase() + (verb ? verb : noun);
+            console.log("This is not " + split);
             var from = "en",
                 to = "fr",
                 text = split;
@@ -71,24 +73,7 @@ var rectifyThis = function() {
                 "&oncomplete=mycallback";
             document.body.appendChild(s);
         };
-        //     $.ajax({
-        //         url: "http://api.microsofttranslator.com/V2/Ajax.svc/Translate?",
-        //         data: {
-        //             appId: "Bearer+" + token,
-        //             text: split,
-        //             from: 'en',
-        //             to: 'fr'
 
-        //         },
-        //         cache: true
-        //     }).done(function(data) {
-        //         consol.log(data);
-        //         if (data.slice(-1) == "1") {
-        //             return data.slice(0, -1);
-        //         }
-        //         return data;
-        //     })
-        // }
         randText();
         $('#correctImage').html('<i class=icon-' + randImage + '></i>');
 
