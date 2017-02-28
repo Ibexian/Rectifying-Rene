@@ -6,7 +6,7 @@
 var token;
 var nlp = window.nlp_compromise;
 $.ajax({
-    url: 'http://api.williamkamovitch.com/translator',
+    url: 'https://api.williamkamovitch.com/translator',
     dataType: 'jsonp'
 }).done(function( data ) {
     token = data.access_token;
@@ -65,7 +65,7 @@ var rectifyThis = function() {
                 to = "fr",
                 text = split;
             var s = document.createElement("script");
-            s.src = "http://api.microsofttranslator.com/V2/Ajax.svc/Translate" +
+            s.src = "https://api.microsofttranslator.com/V2/Ajax.svc/Translate" +
                 "?appId=Bearer " + encodeURIComponent(token) +
                 "&from=" + encodeURIComponent(from) +
                 "&to=" + encodeURIComponent(to) +
