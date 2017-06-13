@@ -6,7 +6,7 @@
 var token;
 var nlp = window.nlp_compromise;
 $.ajax({
-    url: 'https://api.williamkamovitch.com/translator',
+    url: 'http://api.williamkamovitch.com/translator',
     dataType: 'jsonp'
 }).done(function( data ) {
     token = data.access_token;
