@@ -1,7 +1,7 @@
 Rectifying-Rene
 ===============
 
-###Addressing the treachery of icon fonts
+### Addressing the treachery of icon fonts
 
 Project based on René Magritte's 'Treachery of Images' - you know, 'this is not a pipe' with a picture of a pipe above it?
 
@@ -15,7 +15,7 @@ Well, I decided to turn it on its head -  through a combination of randomly gene
 Plus there is a toggle, so now we can have it both ways - true statements or statements on representation - just as René intended.
 
 
-####Technical Colophon:
+#### Technical Colophon:
 - Sass,
 - Bootstrap,
 - Microsoft Translator API,
